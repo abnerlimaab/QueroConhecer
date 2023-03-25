@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C310F569-16E9-43C8-AA3A-3E043950AC52"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63610597-4FE3-4AA0-9A53-5AB1FCB522E7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QueroConhecer/PlaceFinderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "PlaceFinderViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27DED5CE-1CFC-4498-B91E-2467267EC697"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QueroConhecer/PlaceFinderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "PlaceFinderViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "27DED5CE-1CFC-4498-B91E-2467267EC697 - e5a5417847eec8f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QueroConhecer.PlaceFinderViewController.viLoading.getter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "QueroConhecer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abnerlima/Lab/swift/QueroConhecer/QueroConhecer/PlaceFinderViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "27DED5CE-1CFC-4498-B91E-2467267EC697 - 8b698905a3a020fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QueroConhecer.PlaceFinderViewController.viLoading.setter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "QueroConhecer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abnerlima/Lab/swift/QueroConhecer/QueroConhecer/PlaceFinderViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "27DED5CE-1CFC-4498-B91E-2467267EC697 - 18d4f82d03d612f4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QueroConhecer.PlaceFinderViewController.viLoading.modify : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "QueroConhecer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abnerlima/Lab/swift/QueroConhecer/QueroConhecer/PlaceFinderViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "27DED5CE-1CFC-4498-B91E-2467267EC697 - f0f4d09a34fe5f00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QueroConhecer.PlaceFinderViewController.viLoading.modify : Swift.Optional&lt;__C.UIView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "QueroConhecer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abnerlima/Lab/swift/QueroConhecer/QueroConhecer/PlaceFinderViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "27DED5CE-1CFC-4498-B91E-2467267EC697 - 96fbedcf75618b14"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QueroConhecer.PlaceFinderViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; QueroConhecer.PlaceFinderViewController"
+                  moduleName = "QueroConhecer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abnerlima/Lab/swift/QueroConhecer/QueroConhecer/PlaceFinderViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "27DED5CE-1CFC-4498-B91E-2467267EC697 - b275e0d9c2ed04d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QueroConhecer.PlaceFinderViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;QueroConhecer.PlaceFinderViewController&gt;"
+                  moduleName = "QueroConhecer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/abnerlima/Lab/swift/QueroConhecer/QueroConhecer/PlaceFinderViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "188">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8660DC6D-5786-4C81-89BD-00FA23ECD0E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QueroConhecer/PlaceFinderViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "PlaceFinderViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

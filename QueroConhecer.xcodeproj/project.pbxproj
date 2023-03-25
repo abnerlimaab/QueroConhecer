@@ -13,6 +13,9 @@
 		73B2D8E529CEFB3600085AD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B2D8E329CEFB3600085AD0 /* Main.storyboard */; };
 		73B2D8E729CEFB3600085AD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73B2D8E629CEFB3600085AD0 /* Assets.xcassets */; };
 		73B2D8EA29CEFB3600085AD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73B2D8E829CEFB3600085AD0 /* LaunchScreen.storyboard */; };
+		73B2D8F429CEFF1300085AD0 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B2D8F329CEFF1300085AD0 /* PlacesTableViewController.swift */; };
+		73B2D8F629CEFFE900085AD0 /* PlaceFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B2D8F529CEFFE900085AD0 /* PlaceFinderViewController.swift */; };
+		73B2D8F829CF15D300085AD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B2D8F729CF15D300085AD0 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		73B2D8E629CEFB3600085AD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73B2D8E929CEFB3600085AD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73B2D8EB29CEFB3600085AD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73B2D8F329CEFF1300085AD0 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		73B2D8F529CEFFE900085AD0 /* PlaceFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFinderViewController.swift; sourceTree = "<group>"; };
+		73B2D8F729CF15D300085AD0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				73B2D8DF29CEFB3600085AD0 /* SceneDelegate.swift */,
 				73B2D8E129CEFB3600085AD0 /* ViewController.swift */,
 				73B2D8E329CEFB3600085AD0 /* Main.storyboard */,
+				73B2D8F729CF15D300085AD0 /* MapViewController.swift */,
+				73B2D8F529CEFFE900085AD0 /* PlaceFinderViewController.swift */,
+				73B2D8F329CEFF1300085AD0 /* PlacesTableViewController.swift */,
 				73B2D8E629CEFB3600085AD0 /* Assets.xcassets */,
 				73B2D8E829CEFB3600085AD0 /* LaunchScreen.storyboard */,
 				73B2D8EB29CEFB3600085AD0 /* Info.plist */,
@@ -139,7 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				73B2D8E229CEFB3600085AD0 /* ViewController.swift in Sources */,
+				73B2D8F829CF15D300085AD0 /* MapViewController.swift in Sources */,
+				73B2D8F429CEFF1300085AD0 /* PlacesTableViewController.swift in Sources */,
 				73B2D8DE29CEFB3600085AD0 /* AppDelegate.swift in Sources */,
+				73B2D8F629CEFFE900085AD0 /* PlaceFinderViewController.swift in Sources */,
 				73B2D8E029CEFB3600085AD0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,8 +305,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +314,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.abnerlima.QueroConhecer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +336,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +345,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.abnerlima.QueroConhecer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
