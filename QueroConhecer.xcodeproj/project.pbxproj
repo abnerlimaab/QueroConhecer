@@ -16,6 +16,7 @@
 		73B2D8F429CEFF1300085AD0 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B2D8F329CEFF1300085AD0 /* PlacesTableViewController.swift */; };
 		73B2D8F629CEFFE900085AD0 /* PlaceFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B2D8F529CEFFE900085AD0 /* PlaceFinderViewController.swift */; };
 		73B2D8F829CF15D300085AD0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B2D8F729CF15D300085AD0 /* MapViewController.swift */; };
+		73D4704629CF5DD400827FA4 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D4704529CF5DD400827FA4 /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		73B2D8F329CEFF1300085AD0 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 		73B2D8F529CEFFE900085AD0 /* PlaceFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFinderViewController.swift; sourceTree = "<group>"; };
 		73B2D8F729CF15D300085AD0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		73D4704529CF5DD400827FA4 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				73B2D8E329CEFB3600085AD0 /* Main.storyboard */,
 				73B2D8F729CF15D300085AD0 /* MapViewController.swift */,
 				73B2D8F529CEFFE900085AD0 /* PlaceFinderViewController.swift */,
+				73D4704529CF5DD400827FA4 /* Place.swift */,
 				73B2D8F329CEFF1300085AD0 /* PlacesTableViewController.swift */,
 				73B2D8E629CEFB3600085AD0 /* Assets.xcassets */,
 				73B2D8E829CEFB3600085AD0 /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				73B2D8F429CEFF1300085AD0 /* PlacesTableViewController.swift in Sources */,
 				73B2D8DE29CEFB3600085AD0 /* AppDelegate.swift in Sources */,
 				73B2D8F629CEFFE900085AD0 /* PlaceFinderViewController.swift in Sources */,
+				73D4704629CF5DD400827FA4 /* Place.swift in Sources */,
 				73B2D8E029CEFB3600085AD0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
