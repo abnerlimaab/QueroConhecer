@@ -85,7 +85,7 @@ class PlaceFinderViewController: UIViewController {
         let name = placemark.name ?? placemark.country ?? "Desconhecido"
         let address = Place.getFormattedAddress(with: placemark)
         place = Place(name: name, latitude: coordinate.latitude, longitude: coordinate.longitude, address: address)
-        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 2500, longitudinalMeters: 2500)
+        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 3500, longitudinalMeters: 3500)
         
         mapView.setRegion(region, animated: true)
         

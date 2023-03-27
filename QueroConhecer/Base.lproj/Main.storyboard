@@ -50,7 +50,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="ac0-1Z-OtQ"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="GlV-wE-nKe">
                             <connections>
-                                <segue destination="5wx-5p-SM8" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="63x-fI-7Gc"/>
+                                <segue destination="5wx-5p-SM8" kind="presentation" identifier="finderSegue" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="63x-fI-7Gc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
