@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73B0107C29D1CAC200488A9F /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B0107B29D1CAC200488A9F /* PlaceAnnotation.swift */; };
 		73B2D8DE29CEFB3600085AD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B2D8DD29CEFB3600085AD0 /* AppDelegate.swift */; };
 		73B2D8E029CEFB3600085AD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B2D8DF29CEFB3600085AD0 /* SceneDelegate.swift */; };
 		73B2D8E229CEFB3600085AD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B2D8E129CEFB3600085AD0 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73B0107B29D1CAC200488A9F /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		73B2D8DA29CEFB3600085AD0 /* QueroConhecer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueroConhecer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73B2D8DD29CEFB3600085AD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73B2D8DF29CEFB3600085AD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		73B2D8D129CEFB3600085AD0 = {
 			isa = PBXGroup;
 			children = (
+				73B0107B29D1CAC200488A9F /* PlaceAnnotation.swift */,
 				73B2D8DC29CEFB3600085AD0 /* QueroConhecer */,
 				73B2D8DB29CEFB3600085AD0 /* Products */,
 			);
@@ -150,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73B0107C29D1CAC200488A9F /* PlaceAnnotation.swift in Sources */,
 				73B2D8E229CEFB3600085AD0 /* ViewController.swift in Sources */,
 				73B2D8F829CF15D300085AD0 /* MapViewController.swift in Sources */,
 				73B2D8F429CEFF1300085AD0 /* PlacesTableViewController.swift in Sources */,
