@@ -15,8 +15,10 @@ class MapViewController: UIViewController {
     @IBOutlet weak var viInfo: UIView!
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var lbAddress: UILabel!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     var places: [Place]!
+    var pointsOfInterest: [MKAnnotation] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class MapViewController: UIViewController {
         searchBar.isHidden = true
         viInfo.isHidden = true
         
+        mapView.mapType = .mutedStandard
         mapView.delegate = self
         
         if places.count == 1 {
@@ -54,6 +57,8 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func showSearchBar(_ sender: UIBarButtonItem) {
+        searchBar.resignFirstResponder()
+        searchBar.isHidden = !searchBar.isHidden
     }
 }
 
@@ -78,5 +83,43 @@ extension MapViewController: MKMapViewDelegate {
         annotationView?.displayPriority = type == .place ? .required : .defaultHigh
         
         return annotationView
+    }
+}
+
+extension MapViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.isHidden = true
+        searchBar.resignFirstResponder()
+        loading.startAnimating()
+        
+        let request = MKLocalSearch.Request()
+        request.naturalLanguageQuery = searchBar.text
+        request.region = mapView.region
+        
+        let search = MKLocalSearch(request: request)
+        search.start { response, error in
+            if error == nil {
+                guard let response = response else {
+                    self.loading.stopAnimating()
+                    return
+                }
+                
+                self.mapView.removeAnnotations(self.pointsOfInterest)
+                self.pointsOfInterest.removeAll()
+                
+                for item in response.mapItems {
+                    let annotation = PlaceAnnotation(coordinate: item.placemark.coordinate, type: .pointsOfInterest)
+                    annotation.title = item.name
+                    annotation.subtitle = item.phoneNumber
+                    annotation.address = Place.getFormattedAddress(with: item.placemark)
+                    self.pointsOfInterest.append(annotation)
+                }
+                
+                self.mapView.addAnnotations(self.pointsOfInterest)
+                self.mapView.showAnnotations(self.pointsOfInterest, animated: true)
+            }
+            self.loading.stopAnimating()
+        }
+        
     }
 }

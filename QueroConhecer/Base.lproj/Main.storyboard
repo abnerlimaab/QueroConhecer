@@ -86,7 +86,7 @@
                                     </searchBar>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wa6-LU-xOu">
                                         <rect key="frame" x="0.0" y="62" width="410" height="495"/>
-                                        <standardMapConfiguration key="preferredConfiguration"/>
+                                        <hybridMapConfiguration key="preferredConfiguration"/>
                                     </mapView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZuN-0o-fUM">
                                         <rect key="frame" x="0.0" y="563" width="410" height="160"/>
@@ -130,6 +130,11 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="3ss-kD-gQq">
+                                <rect key="frame" x="197" y="448" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" name="main"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nAd-oC-1jz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -154,6 +159,7 @@
                     <connections>
                         <outlet property="lbAddress" destination="Kkg-SP-TIi" id="h0e-82-9Hp"/>
                         <outlet property="lbName" destination="wjo-BI-sJ4" id="TcG-im-9ex"/>
+                        <outlet property="loading" destination="3ss-kD-gQq" id="cBF-jA-3R8"/>
                         <outlet property="mapView" destination="Wa6-LU-xOu" id="zJ6-hK-ykT"/>
                         <outlet property="searchBar" destination="2qC-7Z-pzx" id="Cpp-1f-W6h"/>
                         <outlet property="viInfo" destination="ZuN-0o-fUM" id="Z58-L4-oe7"/>
