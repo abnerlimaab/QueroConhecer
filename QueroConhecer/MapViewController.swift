@@ -26,6 +26,7 @@ class MapViewController: UIViewController {
     var pointsOfInterest: [MKAnnotation] = []
     lazy var locationManager = CLLocationManager()
     var btUserLocation: MKUserTrackingButton!
+    var selectedAnnotation: PlaceAnnotation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +94,12 @@ class MapViewController: UIViewController {
         mapView.showAnnotations(mapView.annotations, animated: true)
     }
     
+    func showInfo() {
+        lbName.text = selectedAnnotation?.title
+        lbAddress.text = selectedAnnotation?.address
+        viInfo.isHidden = false
+    }
+    
     @IBAction func showRoute(_ sender: UIButton) {
     }
     
@@ -123,6 +130,17 @@ extension MapViewController: MKMapViewDelegate {
         annotationView?.displayPriority = type == .place ? .required : .defaultHigh
         
         return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let camera = MKMapCamera()
+        camera.centerCoordinate = view.annotation!.coordinate
+        camera.pitch = 80
+        camera.altitude = 100
+        mapView.setCamera(camera, animated: true)
+        
+        selectedAnnotation = (view.annotation as! PlaceAnnotation)
+        showInfo()
     }
 }
 
