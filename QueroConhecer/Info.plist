@@ -4,6 +4,10 @@
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Precisamos acessar sua localização para traçar rotas</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Precisamos acessar sua localização para traçar rotas</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Precisamos acessar sua localização para traçar rotas</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

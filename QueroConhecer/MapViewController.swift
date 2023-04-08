@@ -80,7 +80,24 @@ class MapViewController: UIViewController {
     }
     
     func showMessage(type: MapMessageType) {
+        let title = type == .authorizationWarn ? "Aviso" : "Erro"
+        let message = type == .authorizationWarn ? "Para usar os recursos de localização do App, você precisa permiri o uso na tela de ajustes" : "Não foi possível encontrar esta rota"
         
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel)
+        alert.addAction(cancelAction)
+        
+        if type == .authorizationWarn {
+            let confirmAction = UIAlertAction(title: "Ir para Ajustes", style: .default) { action in
+                if let appSettings = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(appSettings, options: [:], completionHandler: nil)
+                }
+            }
+            
+            alert.addAction(confirmAction)
+        }
+        
+        present(alert, animated: true)
     }
     
     func addToMap(_ place: Place) {
@@ -101,6 +118,46 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func showRoute(_ sender: UIButton) {
+        if locationManager.authorizationStatus != .authorizedWhenInUse {
+            showMessage(type: .authorizationWarn)
+            return
+        }
+        
+        let request = MKDirections.Request()
+        let placemarkSource = MKPlacemark(coordinate: locationManager.location!.coordinate)
+        let placemarkTarget = MKPlacemark(coordinate: selectedAnnotation!.coordinate)
+        
+        request.source = MKMapItem(placemark: placemarkSource)
+        request.destination = MKMapItem(placemark: placemarkTarget)
+        
+        let directions = MKDirections(request: request)
+        directions.calculate { response, error in
+            if error == nil {
+                if let response = response {
+                    self.mapView.removeOverlays(self.mapView.overlays)
+                    
+                    let route = response.routes.first!
+                    print("Nome: \(route.name)")
+                    print("Distância: \(route.distance)")
+                    print("Duração: \(route.expectedTravelTime)")
+                    
+                    for step in route.steps {
+                        print("Em \(step.distance) metro(s), \(step.instructions)")
+                    }
+                    
+                    self.mapView.addOverlay(route.polyline, level: .aboveRoads)
+                    
+                    var annotations = self.mapView.annotations.filter { annotation in
+                        !(annotation is PlaceAnnotation)
+                    }
+                    annotations.append(self.selectedAnnotation!)
+                    
+                    self.mapView.showAnnotations(annotations, animated: true)
+                }
+            } else {
+                self.showMessage(type: .routeError)
+            }
+        }
     }
     
     @IBAction func showSearchBar(_ sender: UIBarButtonItem) {
@@ -141,6 +198,18 @@ extension MapViewController: MKMapViewDelegate {
         
         selectedAnnotation = (view.annotation as! PlaceAnnotation)
         showInfo()
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKPolyline {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.strokeColor = UIColor(named: "main")?.withAlphaComponent(0.8)
+            renderer.lineWidth = 5
+            
+            return renderer
+        }
+        
+        return MKOverlayRenderer(overlay: overlay)
     }
 }
 
